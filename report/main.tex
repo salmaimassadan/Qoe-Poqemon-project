@@ -18,7 +18,7 @@
 \emergencystretch=1.5em
 \setlist{nosep,leftmargin=*}
 
-\graphicspath{{../figures/}}
+\graphicspath{{figures/}}
 \newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
 \newcommand{\code}[1]{\texttt{#1}}
 
@@ -398,7 +398,7 @@ user's rating tendency, which a deployed system could estimate from a few rating
 \section*{Reproducibility}
 %=====================================================================
 All results come from \code{notebooks/poqemon-qoe-project.ipynb}, which downloads the data, runs from top to
-bottom without manual steps, and writes the figures and result tables used here (\code{figures/},
+bottom without manual steps, and writes the figures and result tables used here (\code{report/figures/},
 \code{results/}). The seed is 42 for the splits, the CV folds, all stochastic models and permutation
 importance; the repeated CV of Section~\ref{sec:split} uses seeds 42--46. Two consecutive runs gave
 identical result files. Software: Python 3.14.4, NumPy 2.5.4, pandas 3.1.0, scikit-learn 1.9.1,
