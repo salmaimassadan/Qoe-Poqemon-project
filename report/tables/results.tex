@@ -1,0 +1,18 @@
+\begin{tabular}{llccc|ccc}
+\toprule
+ & & \multicolumn{3}{c|}{5-fold grouped CV (training users)} & \multicolumn{3}{c}{Held-out test users} \\
+Features & Model & Macro-F1 & Accuracy & MAE & Macro-F1 & Accuracy & MAE \\
+\midrule
+\multirow{5}{*}{Objective (no QoF)} & Dummy & 0.135 $\pm$ 0.002 & 0.507 $\pm$ 0.010 & 0.690 $\pm$ 0.016 & 0.135 & 0.510 & 0.684 \\
+ & kNN & 0.450 $\pm$ 0.020 & 0.520 $\pm$ 0.020 & 0.572 $\pm$ 0.020 & 0.366 & 0.470 & 0.622 \\
+ & SVC & 0.431 $\pm$ 0.022 & 0.477 $\pm$ 0.014 & 0.627 $\pm$ 0.024 & 0.358 & 0.434 & 0.704 \\
+ & Decision tree & 0.466 $\pm$ 0.033 & 0.531 $\pm$ 0.038 & 0.539 $\pm$ 0.041 & 0.447 & 0.513 & 0.572 \\
+ & \textbf{XGBoost}$^\star$ & 0.490 $\pm$ 0.009 & 0.544 $\pm$ 0.030 & 0.531 $\pm$ 0.024 & 0.411 & 0.539 & 0.533 \\
+\midrule
+\multirow{5}{*}{With feedback (QoF)} & Dummy & 0.135 $\pm$ 0.002 & 0.507 $\pm$ 0.010 & 0.690 $\pm$ 0.016 & 0.135 & 0.510 & 0.684 \\
+ & kNN & 0.616 $\pm$ 0.041 & 0.695 $\pm$ 0.016 & 0.328 $\pm$ 0.016 & 0.518 & 0.628 & 0.431 \\
+ & SVC & 0.715 $\pm$ 0.047 & 0.778 $\pm$ 0.045 & 0.235 $\pm$ 0.049 & 0.626 & 0.737 & 0.296 \\
+ & Decision tree & 0.711 $\pm$ 0.036 & 0.770 $\pm$ 0.043 & 0.250 $\pm$ 0.052 & 0.635 & 0.730 & 0.289 \\
+ & \textbf{XGBoost}$^\star$ & 0.774 $\pm$ 0.036 & 0.806 $\pm$ 0.041 & 0.212 $\pm$ 0.055 & 0.689 & 0.753 & 0.266 \\
+\bottomrule
+\end{tabular}

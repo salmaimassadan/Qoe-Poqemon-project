@@ -222,3 +222,10 @@ __marimo__/
 .DS_Store
 # Project
 data/
+
+# LaTeX build files
+report/*.aux
+report/*.log
+report/*.out
+report/*.bbl
+report/*.blg
