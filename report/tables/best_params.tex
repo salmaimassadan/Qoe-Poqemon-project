@@ -1,0 +1,10 @@
+\begin{tabular}{lp{0.4\linewidth}p{0.4\linewidth}}
+\toprule
+Model & Objective (no QoF) & With feedback (QoF) \\
+\midrule
+kNN & \texttt{n\_neighbors}=5, \texttt{weights}=uniform & \texttt{n\_neighbors}=5, \texttt{weights}=uniform \\
+SVC & \texttt{C}=100, \texttt{gamma}=0.1, \texttt{kernel}=rbf & \texttt{C}=0.1, \texttt{kernel}=linear \\
+Decision tree & \texttt{max\_depth}=None, \texttt{min\_samples\_leaf}=20 & \texttt{max\_depth}=5, \texttt{min\_samples\_leaf}=10 \\
+XGBoost & \texttt{learning\_rate}=0.2, \texttt{max\_depth}=5, \texttt{n\_estimators}=100, \texttt{subsample}=0.8 & \texttt{learning\_rate}=0.05, \texttt{max\_depth}=2, \texttt{n\_estimators}=100, \texttt{subsample}=0.8 \\
+\bottomrule
+\end{tabular}
